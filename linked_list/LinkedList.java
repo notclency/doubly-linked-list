@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class list{
+public class LinkedList{
 
     static int player_count[] = {0};
     
@@ -149,7 +149,7 @@ public class list{
      reads a file and its data.
     */
     public void read_file(Node[] teamNodes, int[] player_count) throws FileNotFoundException{
-        File file = new File("C:\\Users\\PC\\Desktop\\proj\\myGit\\linked-list\\linked_list\\team.txt");
+        File file = new File("C:\\Users\\PC\\Desktop\\proj\\myGit\\Linked-List\\doubly-linked-list\\linked_list\\team.txt");
         Scanner readFile = new Scanner(file);
         load(teamNodes, readFile);
     }
@@ -208,7 +208,7 @@ public class list{
     }
 
     public static void main(String[] args) throws FileNotFoundException {
-        list mylist = new list();
+        LinkedList mylist = new LinkedList();
 
         mylist.read_file(teamNodes, player_count);                   // reads and builds the doubly linked list
         mylist.move(mylist.search(1), 1);
